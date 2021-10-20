@@ -34,7 +34,6 @@ public class PersonController {
 
         Person person = new Person(new Date().getTime(), "Sergej Gefährlich", "danger@test.de", 16, LocalDate.now());
         try {
-//            throw new Exception();
             service.save(person);
         } catch (Exception e) {
             return ResponseEntity.internalServerError().body("Irgendwas is kaputt");
